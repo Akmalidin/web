@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.home .container .row .col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container .row .col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.home .container .row .col .btn {
+    border-radius: 20px !important;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 40px;
+}
+.container .row .col .btn {
+    border-radius: 20px !important;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 20%;
+    height: 40px;
+}
+.navbar .collapse ul li a{
+    color: #333 !important;
+    font-weight: 200;
+    font-size: 18px;
+    border-right: 1px solid blue;
+    padding: 0;
+    padding-right: 35px !important;
+    padding-left: 25px !important;
+}
+.carousel-image-1{
+    background-image: url("../img/slide-1.png");
+    background-size: cover;
+    height: 550px;
+}
+.carousel-image-2{
+    background-image: url("../img/slide-2.png");
+    background-size: cover;
+    height: 550px;
+}
+.carousel-image-3{
+    background-image: url("../img/slide-4.png");
+    background-size: cover;
+    height: 550px;
+}
+.container .h1{
+    margin-top: 7rem;
+    margin-left: 7rem;
+    font-size: 55px;
+}
+#home .bg-dark .row .col > p {
+    margin-left: 35px;
+}
+#home .container .row .col #colors {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+} 
+#home .container .row .col #colors:hover {
+    color: #39cece;
+    transition: 0.2s;
+}
+#home .teeth .container .row .col .tooth {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 10px 5px;
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center;
+    width: 55%;
+    margin: 10px;
+}
+#home .teeth .container .row .col .tooth #hover:hover {
+    background-color: grey !important;
+    color: white !important;
+    border: none !important;
+    transition: 0.3s;
+}
+aside .container .row .col-5 {
+    background-image: url("../img/zakaz.png");
+    background-position:center;
+    background-size: 500;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+aside .container .row .col-5 > p{
+    color: #fff;
+    font-weight: bold;
+    margin-top: 7rem;
+    font-size: 21px;
+}
+aside .container .row .col-5 > a{
+    color: #fff;
+    background-color: #39cece;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+aside .container .row .col-12 a {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px 55px;
+    border-radius: .5rem;
+    color: #39cece;
+    box-shadow: 0 0 1.5rem #aaaaaa;
+    margin-left: 5px;
+    /* box-shadow: 0 0 1.5rem #dfdfdf; */
+}
+#input3 .container .bg-white {
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 10px 10px #aaaaaa;
+    border-radius: 10px;
+}
+#input3 .container .bg-white input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #333;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+#ctatiya .container .box-shadow .col-3{
+    margin-top: 2.7rem;
+    box-shadow: 3px 3px 10px 10px #cecece;
+    border-radius: 10px;
+    height: 33rem;
+}
+#ctatiya .container .box-shadow .col-3 img {
+    border-radius: 10px 10px 0 0;
+    width: 110%;
+    margin-left: -0.7rem;
+}
+#otzivi .container .row .bg {
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 10px 10px #aaaaaa;
+    border-radius: 10px;
+}
+.bg-danger .container .row .col{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media(max-width: 400px) {
+    .container {
+        overflow: hidden;
+        width: auto;
+    }
+    .navbar .collapse .navbar-nav .b {
+        display: block !important;
+        border-right: 1px solid blue !important;
+    }
+    .fa-chevron-circle-up {
+        display: none;
+    }
+    .sticky-top .container .row{
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+    .sticky-top .container .row img {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .sticky-top .container .row .col {
+        display: none;
+    }
+    .carousel .fas,
+    .carousel .fas{
+        display: none;
+    }
+    .carousel-inner .carousel-item .w1 {
+        width: 150% !important;
+        margin-left: -7rem;
+    }
+    .carousel-inner .carousel-item img{
+        width: 200% !important;
+    }
+    #home .bg-dark .container .row .col{
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+    .teeth .container .row .col {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        margin: 0 auto;
+    }
+    .teeth .container .row .col a {
+        margin-bottom: 20px !important;
+    }
+    #body .bg-light .container .row{
+        display: block !important;
+        width: 200% !important;
+    }
+    #body #handsomes .row .col{
+        display: block !important;
+    }
+    aside .container:first-child .row {
+        display: block !important;
+        width: 190% !important;
+    }
+    aside .container:first-child .row .col-5{
+        padding: 50px 55px;
+        margin-left: 2rem;
+    }
+    #mobile .row .col-12 a{
+        display: block !important;
+        margin-bottom: 10px !important;
+    }
+    #input3 .bg-light {
+        height: 990px !important;
+    }
+    #input3 .bg-light .text-danger {
+        margin-left: 0 !important;
+    }
+    #input3 .bg-light .container .row {
+        display: block !important;
+        width: 230% !important;
+    }
+    #input3 .bg-light .container .row .col-6 {
+        margin-left: 0px !important;
+    }
+    #input3 .bg-white .form-group .col input,
+    #input3 .bg-white .form-group .col input.ml-5{
+        width: 200px !important;
+        margin-left: -50px !important;
+    }
+    #input3 .bg-white .form-group .col #phone {
+        margin-left: 0px !important;
+    }
+    #input3 .bg-white .btn-outline-danger {
+        margin-left: 1rem !important;
+    }
+    #ctatiya .container {
+        height: 320vh;
+    }
+    #ctatiya .container .row,
+    #ctatiya .container .row .col-3 {
+        display: block !important;
+        width: 300% !important;
+    }
+    #ctatiya .container .row .col-3:nth-child(1),
+    #ctatiya .container .row .col-3:nth-child(2),
+    #ctatiya .container .row .col-3:nth-child(3) {
+        margin-left: 3rem !important;
+    }
+    #otzivi .container {
+        margin-bottom: 0px !important;
+        height: 140vh !important;
+    }
+    #otzivi .container .row {
+        display: block !important;
+        width: 200% !important;
+    }
+    #otzivi .container .row .col-6{
+        margin-left: 1rem !important;
+    }
+    #otzivi .container .row .bg {
+        height: 25rem !important;
+    }
+    #footer .container .row {
+        display: block !important;
+        width: 300% !important;
+    }
+    #footer .container .row .form-group,
+    #footer .container .row .col-4 .h7,
+    #footer .container .row .col-4 .btn-danger {
+        margin-left: 0px !important;
+    }
+    #footer .container .row .form-group #col {
+        margin-left: -1rem !important;
+        width: 15rem !important;
+    }
+}
+  </style>
+	<title>Стоматология «Sadaf»</title>
+</head>
+<body>
+	<!-- Work -->
+<div id="bg" class="bg-primary text-white">
+				<div class="container">
+						<h6 class="py-3">Центр стоматологии для взрослых и детей в Оше — Работаем с 1995 года</h6>
+				</div>
+</div>
+<a href="#bg" id="otdelni"  style="position: absolute;"><i style="position: fixed; top: 29rem; left: 94%;" class="fas fa-chevron-circle-up fa-3x text-danger"></i></a>
+<!-- LOGO -->
+<div class="home sticky-top bg-white py-2">
+<div class="container">
+	<div class="row py-2">
+		<img src="img/doctor 4.png" style="width: 200px;" alt="" class="animated flash">
+		<div class="col">
+			<p >Ош, ул. Полевая<br><small>Работаем ежедневно с 8:00 до 20:00</small></p>
+			<a href="#input2" id="otdelni" class="btn btn-danger">Записаться</a>
+			<a class="btn btn-outline-danger" href="https://sadaf.reservio.com/booking/business/service/resource/time?businessId=d43c1995-d994-48ba-96df-65756f990f8c&serviceId=272d9357-4343-41d0-920e-25bff8c4be5f&resourceId=deed7ad0-3fe2-4090-a74f-846a046fdaa6" target="_blank">Выбрать дату</a>
+			<a href="tel:+996553676710" class="text-primary" id="modall animate__animated animate__fadeInLeft" style="font-size: 25px;">+996 553 636 379</a>
+		</div>
+	</div>
+</div>
+
+</div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm py-5" data-aos="fade-up">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+		<i class="fas fa-bars"></i>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+		<ul class="navbar-nav m-auto">
+			<li class="nav-item">
+					<a class="nav-link" href="#body">O КЛИНИКЕ</a>
+			</li>
+
+			<li class="nav-item">
+					 <a class="nav-link" href="#uslugi">УСЛУГИ</a>
+			</li>
+
+			<li class="nav-item">
+					 <a href="#bad" class="nav-link">ЧТО БЕСПОКОИТ</a>
+			</li>
+			<li class="nav-item">
+					 <a class="nav-link" href="#handsomes">СПЕЦИАЛИСТЫ</a>
+			</li>
+			<li class="nav-item">
+					 <a class="nav-link" href="#otzivi">ОТЗЫВЫ</a>
+			</li>
+			<li class="nav-item">
+					<a class="nav-link b" href="#ctatiya" style="border-right: none;">ПАЦИЕНТАМ</a>
+			</li>
+			<li class="nav-item">
+				<a href="#input2" id="otdelni" class="b nav-link" style="display: none;">Записаться</a>
+			</li>
+			<li class="nav-item">
+				<a class="b nav-link" href="https://sadaf.reservio.com/booking/business/service/resource/time?businessId=d43c1995-d994-48ba-96df-65756f990f8c&serviceId=272d9357-4343-41d0-920e-25bff8c4be5f&resourceId=deed7ad0-3fe2-4090-a74f-846a046fdaa6" target="_blank" style="display: none;">Выбрать дату</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+<!-- Carousel -->
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+	<div class="carousel-inner">
+	  <div class="carousel-item active">
+		<a href="#handsomes" id="otdelni"><img src="img/slide-1.1.png" class="w-100 w1"></a>
+	  </div>
+	  <div class="carousel-item">
+		<a href="#handsomes" id="otdelni"><img src="img/slide-2.png" class="w-100"></a>
+	  </div>
+	  <div class="carousel-item">
+		<a href="#ctatiya" id="otdelni"><img src="img/slide-4.png" class="w-100"></a>
+	  </div>
+	</div>
+	<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+	  <i class="fas fa-arrow-left fa-3x text-danger" aria-hidden="true"></i>
+	</a>
+	<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+		<i class="fas fa-arrow-right fa-3x text-danger" aria-hidden="true"></i>
+	</a>
+  </div>
+<!-- Uslugi Stamotologiya dlya vcey semi -->
+<section id="home">
+	<div class="bg-dark">
+	<div class="container">
+		<div class="row py-2">
+			<div class="col text-white" data-aos="fade-down">
+				<p>Лечение в наличную</p>
+				<p> Минимальная травматичность и максимальный комфорт</p>
+				<p>Передовые методики и лучшие материалы</p>
+				<p>Выполняем сложнейшие операции</p>
+				<p>Удобное расположение</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="uslugi" class="container py-5"  data-aos="fade-right">
+	<h1>Стоматология для всей семьи</h1>
+	<div class="row">
+		<div class="col">
+			<p>«Sadaf» – одна из ведущих клиник стоматологии Оша, работаем с 1995 года. <br> Мы проводим профилактику и лечение заболеваний полости рта. Вас ждут <br> высококвалифицированные специалисты, самое современное оборудование, <br> продуманная организация работы с пациентами.</p>
+		</div>
+	</div>
+</div>
+<div class="teeth">
+<div class="container">
+	<div class="row">
+		<div class="col" data-aos="fade-left">
+			<div class="tooth teeth1">
+			<a class="" href="#" id="colors"><i>Лечение зубов</i></a><br>
+			<img style="border-radius: 5px; width: 100%; height: 270px;" src="img/download.jpg" alt=""><br>
+			<button style="border: none; outline: none; background-color: transparent;"><a id="hover" href="" class="w-50 btn btn-primary">Подробнее...</a></button>
+		</div>
+		<div class="tooth teeth1">
+			<a href="#" id="colors"><i>Ортопедия</i></a><br>
+			<img style="border-radius: 5px; width: 100%;" src="img/ortodonty.jpg" alt=""><br>
+			<button style="border: none; outline: none; background-color: transparent;"><a id="hover" href="" class="w-50 btn btn-primary">Подробнее...</a></button>
+		</div>
+		<div class="tooth teeth1">
+			<a href="#" id="colors"><i>Имплантация</i></a><br>
+			<img style="border-radius: 5px; width: 100%;" src="img/dentimp.jpg" alt=""><br>
+			<button style="border: none; outline: none; background-color: transparent;"><a id="hover" href="" class="w-50 btn btn-primary">Подробнее...</a></button>
+		</div>
+		</div>
+	</div>
+	<div class="row py-5">
+		<div class="col" data-aos="fade-up">
+			<div class="tooth teeth1">
+				<a href="#" id="colors"><i>Пародонтология</i></a><br>
+				<img style="border-radius: 5px; width: 100%;" src="img/para.jpg" alt=""><br>
+				<button style="border: none; outline: none; background-color: transparent;"><a id="hover" href="" class="w-50 btn btn-primary">Подробнее...</a></button>
+			</div>
+			<div class="tooth teeth1">
+				<a href="#" id="colors"><i>Хирургическая</i></a><br>
+				<img style="border-radius: 5px; width: 100%;" src="img/hirurg.jpg" alt=""><br>
+				<button style="border: none; outline: none; background-color: transparent;"><a id="hover" href="" class="w-50 btn btn-primary">Подробнее...</a></button>
+			</div>
+			<div class="tooth teeth1">
+				<a href="#" id="colors"><i>Детская  стоматология</i></a><br>
+				<img style="border-radius: 5px; width: 100%;" src="img/dets.jpg" alt=""><br>
+				<button style="border: none; outline: none; background-color: transparent;"><a id="hover" href="" class="w-50 btn btn-primary">Подробнее...</a></button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</section>
+<!-- O kompany Sadaf  Nashi cpetialisti Chto vas bespokoit-->
+<section id="body">
+	<div class="bg-light">
+		<div class="container py-5" data-aos="fade-left">
+			<h2><i>«Sadaf»</i> - центр стоматологии экспертного уровня</h2>
+			<div class="progress bg-danger" style="width: 110px; height: 2px;"></div>
+		<div class="row mt-5">
+   			<div class="col-6">
+				<p>Поиск идеальной стоматологии в Оше методом «проб и ошибок» для многих занимает не один год. Несмотря на огромный ассортимент предложений, это весьма сложная задача.</p>
+				<p>Почему? Потому что каждый хочет найти клинику, где он сможет профессионально, комплексно решать все случаи, связанные с зубами и полостью рта, на протяжении всей своей жизни при разумном соотношении цены и качества получаемых услуг.</p>
+				<p>Наш центр стоматологии уже 25 лет работает именно так. Мы практикуем комплексное ведение пациента сразу несколькими профильными специалистами, оперативно решая все возникающие проблемы.</p>
+			</div>
+			<div class="col-6">
+				<h1>Video</h1>
+				<video src=""></video>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="container">
+			<a href="" class="mr-5" style="color: #39cece; font-weight: bold;
+			font-size: 20px;">О клинике</a>
+			<a href="" style="font-size: 20px; font-weight: bold; color: #333;">Интерьер</a>
+	</div>
+	<div id="handsomes" class="container py-5" data-aos="fade-left">
+		<h3 style="font-weight: bold;">Наши специалисты</h3>
+		<div class="progress bg-danger" style="width: 210px; height: 2px;"></div>
+		<div class="row mt-5">
+			<div class="col">
+				<p><img class="w-100" src="img/doctor 5.jpg" alt="">ФИО <br>БИОГРАФИЯ <br><br> <a href="#input2" id="otdelni" class="btn btn-outline-danger w-75">Записаться</a></p>
+				<p><img class="w-100" src="img/doctor 4.jpg" alt="">ФИО <br>БИОГРАФИЯ <br><br> <a href="#input2" id="otdelni" class="btn btn-outline-danger w-75">Записаться</a></p>
+				<p><img class="w-100" src="img/doctor 5.jpg" alt="">ФИО <br>БИОГРАФИЯ <br><br> <a href="#input2" id="otdelni" class="btn btn-outline-danger w-75">Записаться</a></p>
+				<p><img class="w-100" src="img/sadaf-woman.jpeg" alt="">ФИО <br>БИОГРАФИЯ <br><br> <a href="#input2" id="otdelni" class="btn btn-outline-danger w-75">Записаться</a></p>
+			</div>
+		</div>
+	</div>
+	<aside>
+		<div id="bad" class="container" data-aos="fade-left">
+			<h3>Что вас беспокоит?</h3>
+			<div class="progress bg-danger" style="width: 210px; height: 2px;"></div>
+			<div class="row mt-5">
+				<div class="col-7">
+					<p>Мы практикуем комплексное ведение пациента сразу несколькими профильными специалистами, и оперативно решаем любые проблемы. Главное – не затягивать с лечением и не пытаться исправить положение народными средствами.</p>
+					<p>Болезни зубов можно обнаружить на самых ранних стадиях, когда реально их не просто спасти, но и полностью вернуть исходную функциональность и внешний вид. Просто вовремя обратитесь в стоматологическую клинику, наши специалисты все сделают профессионально и безболезненно.</p>
+				</div>
+				<div class="col-5">
+					<p class="s">Нужна консультация?</p>
+					<a href="#footer2" id="otdelni">Заказать звонок</a>
+				</div>
+			</div>
+		</div>
+		<div id="mobile" class="container" data-aos="fade-up">
+			<div class="row mt-5">
+				<div class="col-12">
+					<a href="./prodoljenie/Nalyot_na_zubah.html">Налет на зубах</a>
+					<a href="./prodoljenie/Ostraya_zubnaya_bol.html">Острая зубная боль</a>
+					<a href="./prodoljenie/cletela_plomba.html">Слетела пломба</a>
+					<a href="./prodoljenie/otkololcya_zub.html">Откололся зуб</a>
+				</div>
+			</div>
+			<div class="row mt-5">
+				<div class="col-12">
+					<a href="./prodoljenie/crovotochivost_desen.html">Кровоточивость десен</a>
+					<a href="./prodoljenie/zapah_izo_rta.html">Запах изо рта</a>
+					<a href="./prodoljenie/podvijnost_zuba.html">Подвижность зуба</a>
+					<a href="./prodoljenie/yellow-nalyot.html">Желтый налет на зубах</a>
+				</div>
+			</div>
+			<div class="row mt-5">
+				<div class="col-12">
+					<a href="./prodoljenie/nepravilniy_prikus.html">Неправильный прикус</a>
+					<a href="./prodoljenie/bol_decen.html">Боль в области десен</a>
+					<a href="./prodoljenie/chuvstvitelnost_zubov.html">Чувствительность зубов</a>
+				</div>
+			</div>
+		</div>
+	</aside>
+</section>
+<!-- Zapisatsya na priyom Nashi Stati -->
+<section id="input3" style="margin-top: 5rem;">
+	<div class="bg-light" style="height: 600px;">
+	<div class="container py-5" data-aos="fade-right">
+		<h1>Почему <i>«Sadaf»?</i></h1>
+		<div class="progress bg-danger" style="width: 210px; height: 2px;"></div>
+		<div class="row">
+			<div class="col-5 py-4">
+				<h5 class="text-primary">СОХРАНЕНИЕ И ВОССТАНОВЛЕНИЕ ЗУБОВ</h5>
+				<p>Один из наших ключевых принципов – минимальная травматичность. Это означает максимальное сбережение собственных зубов.</p>
+				<h5 class="text-primary">ЛЕЧИМ ПАЦИЕНТОВ ИНДИВИДУАЛЬНО</h5>
+				<p>Выявляем проблемы с помощью высокоточной диагностики, подходим к решению индивидуально.</p>
+			</div>
+			<div class="col-6 py-4" style="margin-left: 70px;">
+				<h5 class="text-primary">РЕШАЕМ ЗАДАЧИ ЛЮБОГО УРОВНЯ СЛОЖНОСТИ</h5>
+				<p>Это возможно благодаря современному, высокоточному, наукоемкому оборудованию и контролю с помощью микроскопа.</p>
+				<h5 class="text-primary">ВЫГОДНОЕ РАСПОЛОЖЕНИЕ В САМОМ ЦЕНТРЕ ГОРОДА</h5>
+				<p>Добраться до нас одинаково удобно и личным и общественным транспортом из любого района.</p>
+			</div>
+		</div>
+		<div id="input2" class="bg-white pl-3" data-aos="fade-down">
+			<h4 class="text-danger py-4 ml-5">Записаться на прием</h4>
+			<form id="form" action="https://formspree.io/f/mzbkabyl" class="form-inline my-2 my-lg-0" method="POST">
+				<div class="form-group row ml-5">
+					<div class="col">
+						<input type="text" name="Имя" placeholder="Имя *">
+					</div>
+				</div>
+			<div class="form-group row ml-5 mt-2">
+				<div class="col">
+					<input class="ml-5" type="text" name="Фамилия" placeholder="Фамилия *">
+				</div>
+			</div>
+				<div class="form-group row" style="margin-left: -1px;">
+					<div class="col">
+						<input id="phone" type="number" name="Телефон" placeholder="Телефон *" style="margin-left: 3rem;">
+					</div>
+				</div>
+				<button type="submit" class="btn btn-outline-danger mt-4" data-toggle="modal" data-target="#exampleModal"  style="margin-left: 7rem; padding: 10px 55px; border-radius: 20px;">Записаться</button>
+				<div class="modal fade2" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <h5 class="modal-title text-success" id="exampleModalLabel">Данные приняты</h5>
+						  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						  </button>
+						</div>
+						<div class="modal-body" id="modalscript">Спасибо ваши данные приняты!<br>Ожидайте звонок!</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+						</div>
+					  </div>
+					</div>
+				  </div>
+			</form>
+			</div>
+			<div id="status"></div>
+	</div>
+
+</div>
+<section id="ctatiya" style="margin-top: 10rem;">
+	<div class="container">
+		<h3>Наши статьи</h3>
+		<div class="progress bg-danger" style="width: 210px; height: 2px;"></div>
+		<div class="row box-shadow">
+			<div class="col-3" data-aos="fade-up">
+				<img class="mb-5" src="img/garantiya.jpg" alt="">
+				<h4>Какие гарантии может дать клиника стоматологии?</h4>
+				<p>Главные требования, которые мы предъявляем к лечению и протезированию зубов – качество и надежность....</p>
+				<a href="./prodoljenie/garntia.html" class="btn btn-outline-primary" style="border-radius: 20px; margin-top: 1.8rem;">Читать дальше</a>
+			</div>
+			<div class="col-3" style="margin-left: 7rem;" data-aos="fade-up">
+				<img class="mb-5" src="img/zub.jpg" alt="">
+				<h4>Приживаемость импланта - почему это так важно и где гарантии?</h4>
+				<p>Приживаемость импланта является главным фактором, определяющим успешность имплантации зубов. Процеду...</p>
+				<a href="./prodoljenie/implontant.html" class="btn btn-outline-primary" style="border-radius: 20px;">Читать дальше</a>
+			</div>
+			<div class="col-3" style="margin-left: 7rem;" data-aos="fade-up">
+				<img class="mb-5" src="img/chistka.png" alt="">
+				<h4>Ежедневный уход за зубами. Советы врачей «Sadaf»</h4>
+				<p>Правильный уход за зубами может предотвратить дорогостоящее лечение. Каких правил следует придержива...</p>
+				<a href="./prodoljenie/uhod.html" class="btn btn-outline-primary" style="border-radius: 20px; margin-top: 1.8rem;">Читать дальше</a>
+			</div>
+		</div>
+	</div>
+</section>
+</section>
+<!-- For children -->
+<!-- <section id="kids">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+	</div>
+</section> -->
+<!-- Otzivi -->
+<section id="otzivi" class="bg-light mt-5 py-5">
+	<div class="container">
+		<h3>Отзывы клиентов</h3>
+		<div class="progress bg-danger" style="width: 225px; height: 2px;"></div>
+		<div class="row">
+			<div class="col-6 mt-5" data-aos="fade-right">
+				<p>Мы делаем все для того, чтобы каждый наш пациент чувствовал себя полностью комфортно, ощущал свою исключительную важность для нашей клиники.</p>
+				<p>Мы никогда не практикуем поточный метод, это дает возможность уделить каждому пациенту максимум внимания.</p><br><br>
+			</div>
+			<div class="col-6 bg" data-aos="fade-left"><br>
+				<h5>Орозматов С. Г.</h5><br>
+				<p>Посещаю клинику «Sadaf» несколько лет. Доверяю доктору Азизбеку Иминову Авазовичу. Очень внимательный врач, профессионально подходит к решению проблем, использует различные способы, чтобы добиться отличного результата. Также в клинике приветливый персонал. На ресепшене стараются всегда оказать содействие, подобрать удобное время записи. Чувствуешь себя очень комфортно. Спасибо врачам и персоналу!!! Рекомендую клинику всем!!!</p>
+			</div>
+		</div>
+	</div>
+</section>
+<footer id="footer" class="mt-5 py-5 bg-dark">
+	<div class="container" data-aos="fade-up">
+		<div class="row">
+			<div class="col-4 text-white">
+				<h4>«Sadaf»</h4>
+				<div class="progress bg-danger" style="width: 210px; height: 2px;"></div><br>
+				<p>Компания «Sadaf» существует на рынке
+					Кыргызстана c 1995 года. За время работы
+					мы постоянно совершенствуем свои про-
+					фессиональные навыки и процесс сотруд-
+					ничества с клиентами. Сегодня «Sadaf»
+					это стабильная компания. Это команда опытных специалистов, работающих на общий результат.</p>
+			</div>
+			<div class="col-4 text-white" id="footer2">
+				<h4>Карта</h4>
+				<div class="progress bg-danger" style="width: 210px; height: 2px;"></div><br>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d648.7087764814196!2d72.78872882918573!3d40.51436501827542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDMwJzUxLjciTiA3MsKwNDcnMjEuNCJF!5e1!3m2!1sru!2skg!4v1605511672452!5m2!1sru!2skg" width="300" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+			<div class="col-4">
+					<h4 class="text-white ml-5 h7">Перезвонить мне</h4>
+					<div class="ml-5 progress bg-danger" style="width: 120px; height: 2px;"></div>
+					<form id="form" action="https://formspree.io/f/mzbkabyl" class="py-4 form-inline my-2 my-lg-0" method="POST">
+						<div class="form-group row ml-4">
+							<div class="col" id="col">
+								<input required class="form-control" type="text" name="Имя" placeholder="Имя *">
+							</div>
+						</div>
+					<div class="form-group row ml-4 mt-3">
+						<div class="col" id="col">
+							<input required class="form-control" type="text" name="Фамилия" placeholder="Фамилия *">
+						</div>
+					</div>
+						<div class="form-group row ml-4 mt-3">
+							<div class="col" id="col">
+								<input required class="form-control" id="phone" type="number" name="Телефон" placeholder="Телефон *">
+							</div>
+						</div>
+						<button type="submit" class="btn btn-danger mt-4" style="margin-left: 3rem; padding: 10px 55px; border-radius: 20px;">Отправить</button>
+					</form>
+			</div>
+			</div>
+			<div id="status"></div>
+		</div>
+</footer>
+<footer class="bg-danger text-white">
+	<div class="container">
+	<div class="row">
+		<div class="col">
+			<p class="py-2">Компания «Sadaf» все права защищены</p>
+		</div>
+	</div>
+	</div>
+</footer>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="//cdn.callbackhunter.com/cbh.js?hunter_code=4fa48bb7c65ddbad596465f0b4d89da4" charset="UTF-8" async></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+  let links = document.querySelectorAll(".navbar-nav a");
+let links2 = document.querySelectorAll("#otdelni");
+for (const link of links) {
+  link.addEventListener("click", clickHandler);
+}
+function clickHandler(e) {
+  e.preventDefault();
+  let href = this.getAttribute("href");
+  let offsetTop = document.querySelector(href).offsetTop;
+  scroll({
+    top: offsetTop,
+    behavior: "smooth"
+  })
+}
+
+for (const link of links2) {
+  link.addEventListener("click", clickHandler);
+}
+function clickHandler(e) {
+  e.preventDefault();
+  let href = this.getAttribute("href");
+  let offsetTop = document.querySelector(href).offsetTop;
+  scroll({
+    top: offsetTop,
+    behavior: "smooth"
+  })
+}
+
+
+var form = document.getElementById("form");
+var status = document.getElementById('status');
+
+function success() {
+  form.reset();
+  status.classList.add("success");
+  status.innerHTML = 'Спасибо данные приняты';
+}
+
+function error() {
+  status.classList.add("error");
+  status.innerHTML = 'Извините данные неприняты';
+}
+form.addEventListener("submit", function (ev) {
+  ev.preventDefault();
+  var data = new FormData(form);
+  ajax(form.method, form.action, data, success, error);
+});
+
+function ajax(method, url, data, success, error) {
+  var xhr = new XMLHttpRequest();
+  xhr.open(method, url);
+  xhr.setRequestHeader("Accept", "application/json");
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState !== XMLHttpRequest.DONE) return;
+    if (xhr.status === 200) {
+      success(xhr.response, xhr.responseType);
+    } else {
+      error(xhr.status, xhr.response, xhr.responseType);
+    }
+  };
+  xhr.send(data);
+  
+}
+AOS.init();
+  </script>
+</body>
+</html>
